@@ -6,8 +6,8 @@ export const Nicklogo = () => {
     return (
       <>
        <div className='nicklogoPosition'>
-          <p> Nick McMilan </p>
-           <img class="bel" src={image} alt="some example image"></img>
+          <p className='nicklogoImgPosition'> Nick McMilan </p>
+           <img className="nicklogoImg" src={image} alt="some example image"></img>
         </div>
       </>
     );

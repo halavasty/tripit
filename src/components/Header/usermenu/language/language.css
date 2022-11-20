@@ -1,4 +1,8 @@
 .bel{
-    width: 50px;
+    width: 28px;
     background-image: url();
-   }
+}
+
+.belPosition{
+    padding: 12px 22.89px 0px 0px;
+}

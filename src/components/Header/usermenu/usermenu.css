@@ -1,6 +1,16 @@
 .center{
     display: flex;
-    text-align: center;
-    justify-content: center;
+    text-align: right;
+    justify-content: right;
 
+}
+
+.userMain{
+    border-bottom: 1px solid black;
+    width: 402px;
+    padding: 36px 0px 26px 0px;
+}
+
+.userMainPosition{
+  margin: 36px 0px 0px 48px;
 }

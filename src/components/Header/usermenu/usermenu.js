@@ -7,7 +7,7 @@ import { Nicklogo } from './nicklogo';
 export const Usermenu = () => {
     return (
       <>
-      <div className='center'>
+      <div className='center userMain userMainPosition'>
         <Language/>
         <Bell/>
         <Nicklogo/>

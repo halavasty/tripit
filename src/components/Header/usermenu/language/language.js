@@ -7,7 +7,7 @@ import image from "../../../../assets/svg/Flag_UK.svg";
 export const Language = () => {
     return (
       <>
-       <div>
+       <div className='belPosition'>
           <img class="bel" src={image} alt="some example image"></img>
         </div>
       </>
