@@ -1,5 +1,43 @@
-.Menu {
-  background-color: red;
+header, .button {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }
-.Menu-List {
+
+.Menu{
+  width: 15%;
+  padding-left: 1.25%;
+  padding-top: 1.93%;
+  padding-bottom: 1.93%;
+}
+
+.menu{
+  margin: 0px;
+  padding-left: 8%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button{
+  width: 84%;
+  margin: 0px;
+}
+
+.button:hover{
+  border: 1px solid black;
+}
+
+.image{
+  width: 18px;
+  height: 18px;
+}
+
+.buttonText{
+  margin: 0px;
+  width: 80%;
+  font-weight: 500;
 }
