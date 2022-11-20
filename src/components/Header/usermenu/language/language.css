@@ -11,7 +11,25 @@
     justify-content: center;
 }
 
+.belPosition:hover{
+    opacity: 0.8;
+}
+
 .lisLungudg{
     position: absolute;
-  
+    margin: 43px 263px 0px 0px;
+    list-style-type: none; 
+    background-color: #346AFF;
+    padding: 3px 5px;
+    color: white;
+}
+
+.lisLungudg:hover{
+    position: absolute;
+    margin: 43px 263px 0px 0px;
+    list-style-type: none; 
+    background-color: #346AFF;
+    padding: 3px 5px;
+    color: white;
+    opacity: 0.5;
 }

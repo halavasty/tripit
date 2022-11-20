@@ -3,42 +3,42 @@ import * as ReactDOM from 'react-dom';
 import "./language.css";
 import image from "../../../../assets/svg/Flag_UK.svg";
 
-
-//let image = require('../../assets/img/bel.jpg');
-let test = "Тест";
 let lisLungudg = "lisLungudg";
-
+let dellClass = "dellClass";
 
 const mainHTML = `
-  <ul  class="${lisLungudg}">
-    <li>Мова</li>
-    <li>Мова</li>
-    <li>Мова</li>
-    <li>Мова</li>
-    <li>Мова</li>
-    <li>Мова</li>
+  <ul id="${dellClass}" class="${lisLungudg}">
+    <li>English</li>
   </ul>
 `;
 
-function activateLasers(){
-  console.log("Здесь");
-  //alert(test);
+let count = 0;
 
+function activateLasers(){
+
+
+  if(count === 0){
   const textMainGo = document.querySelector("#textMainGo");
   textMainGo.insertAdjacentHTML("afterend", mainHTML);
+  count = 1;
+  }else{
+  let elem = document.querySelector("#dellClass");
+  if(elem != null){
+  elem.remove();
+  }
+  count = 0;
+  }
 };
-
 
 
 export const Language = () => {
     return (
       <>
-       <div onClick={activateLasers} className='belPosition'>
+       <div id='textMainGo' onClick={activateLasers} className='belPosition'>
           <img   class="bel" src={image} alt="some example image"></img>
         </div>
         
-        <div id='textMainGo'>
-        </div>
+ 
 
       </>
     );
