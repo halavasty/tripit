@@ -1,13 +1,13 @@
+
 .nicklogoPosition{
     display: flex;
     text-align: center;
     justify-content: center;
-    width: 189px;
 
 }
 
 .nicklogoImg{
-    width: 48px;
+    width: 28px;
 }
 
 .nicklogoImgPosition{
