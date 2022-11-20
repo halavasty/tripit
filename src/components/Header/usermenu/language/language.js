@@ -14,6 +14,9 @@ const mainHTML = `
     <li>Мова</li>
     <li>Мова</li>
     <li>Мова</li>
+    <li>Мова</li>
+    <li>Мова</li>
+    <li>Мова</li>
   </ul>
 `;
 
