@@ -65,13 +65,13 @@ function activateLasersBel() {
     rootTwo.render(devTwo);
     ++count;
   } else {
-    function createMarkup() {
+    function createSix() {
       return {
         __html: `  <div id='textMainGo' onClick={activateLasers}  class="selecting-lang"> <img  class="lang-flag" src=${image}/></div>`,
       };
     }
 
-    function createMarkup5() {
+    function createFive() {
       return {
         __html: `  <div id='textMainGoTwo'  onClick={activateLasersBel} class="selecting-lang"> <img  class="lang-flag" src=${imageBel}/></div>`,
       };
@@ -82,8 +82,8 @@ function activateLasersBel() {
       document.getElementById("textMainGoTwo")
     );
 
-    let dev = <div dangerouslySetInnerHTML={createMarkup()} />;
-    let devTwo = <div dangerouslySetInnerHTML={createMarkup5()} />;
+    let dev = <div dangerouslySetInnerHTML={createSix()} />;
+    let devTwo = <div dangerouslySetInnerHTML={createFive()} />;
     root.render(dev);
     rootTwo.render(devTwo);
     return (count = 1);
