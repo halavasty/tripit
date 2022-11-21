@@ -1,8 +1,8 @@
 import React  from 'react';
 import "./usermenu.css";
-import { Language } from './language';
-import { Bell } from './bell';
-import { Nicklogo } from './nicklogo';
+import { Language } from './Language';
+import { Bell } from './Bell';
+import { Nicklogo } from './Nicklogo';
 
 export const Usermenu = () => {
     return (
