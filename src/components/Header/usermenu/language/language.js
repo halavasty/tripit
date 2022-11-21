@@ -44,15 +44,20 @@ let a = "onClick={activateLasersBel}";
 
 
 }
-
+let ab = 1;
 
 function activateLasersBel(){
  // alert("флаг 2");
 
+
+if(ab === 1){
+ let a = "onClick={activateLasersBel}";
+ let b = "onClick={activateLasers}"
+
  function createMarkup3() {
   return {__html: `
        
-            <div id='textMainGoTwo' onClick={activateLasers} class="selecting-lang"><img  class="lang-flag" src=${image}/>
+  <div id='textMainGo' ${a} class="selecting-lang"><img  class="lang-flag" src=${image}/>
       
   `};
 }
@@ -60,12 +65,12 @@ function activateLasersBel(){
   function createMarkup2() {
     return {__html: `
          
-              <div id='textMainGo' onClick={activateLasersBel} class="selecting-lang"><img  class="lang-flag" src=${imageBel}/></div>
+              <div id='textMainGo' ${b} class="selecting-lang"><img  class="lang-flag" src=${imageBel}/></div>
         
     `};
   }
   
-  ++a;
+
   console.log(a);
   const root = ReactDOM.createRoot(document.getElementById('textMainGo'));
   const rootTwo = ReactDOM.createRoot(document.getElementById('textMainGoTwo'));
@@ -74,6 +79,27 @@ function activateLasersBel(){
 
   root.render(dev);
   rootTwo.render(devTwo);
+ ++ab;
+}else{
+  function createMarkup() {
+    return {__html: `  <div id='textMainGo' onClick={activateLasers}  class="selecting-lang"> <img  class="lang-flag" src=${image}/></div>`};
+  }
+
+  function createMarkup5() {
+    return {__html: `  <div id='textMainGoTwo'  onClick={activateLasersBel} class="selecting-lang"> <img  class="lang-flag" src=${imageBel}/></div>`};
+  }
+
+
+  console.log(a);
+  const root = ReactDOM.createRoot(document.getElementById('textMainGo'));
+  const rootTwo = ReactDOM.createRoot(document.getElementById('textMainGoTwo'));
+ 
+  let dev = <div dangerouslySetInnerHTML={createMarkup()} />;
+  let devTwo = <div dangerouslySetInnerHTML={createMarkup5()} />;
+  root.render(dev);
+  rootTwo.render(devTwo);
+  return ab = 1;
+}
 
 }
 
