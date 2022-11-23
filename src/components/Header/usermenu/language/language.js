@@ -4,17 +4,20 @@ import image from "../../../../assets/svg/Flag_UK.svg";
 import imageBel from "../../../../assets/img/bel.jpg";
 import ReactDOM from "react-dom";
 
+let selectingLunguage = "class='selecting-Lunguage'";
+let lunguageFlag = "class='Lunguage-flag'";
+
 function activateLasers() {
 
   function createMarkup() {
     return {
-      __html: `  <div id='textMainGo' onClick={activateLasers}  class="selecting-lang"> <img  class="lang-flag" src=${image}/></div>`,
+      __html: `  <div id='textMainGo' ${selectingLunguage} <img  ${lunguageFlag} src=${image}/></div>`,
     };
   }
 
   function createFoor() {
     return {
-      __html: `  <div id='textMainGoTwo'  onClick={activateLasersBel} class="selecting-lang"> <img  class="lang-flag" src=${imageBel}/></div>`,
+      __html: `  <div id='textMainGoTwo' ${selectingLunguage} <img  ${lunguageFlag} src=${imageBel}/></div>`,
     };
   }
 
@@ -30,7 +33,6 @@ function activateLasers() {
 let count = 1;
 
 function activateLasersBel() {
-  // alert("флаг 2");
 
   if (count === 1) {
     let activateBel = "onClick={activateLasersBel}";
@@ -39,9 +41,7 @@ function activateLasersBel() {
     function createThree() {
       return {
         __html: `
-       
-                <div id='textMainGo' ${activateBel} class="selecting-lang"><img  class="lang-flag" src=${image}/>
-                    
+                <div id='textMainGo' ${activateBel} ${selectingLunguage}><img  ${lunguageFlag} src=${image}/>
                 `,
       };
     }
@@ -49,7 +49,7 @@ function activateLasersBel() {
     function createTwo() {
       return {
         __html: `
-              <div id='textMainGo' ${activate} class="selecting-lang"><img  class="lang-flag" src=${imageBel}/></div>
+              <div id='textMainGo' ${activate} ${selectingLunguage}><img  ${lunguageFlag} src=${imageBel}/></div>
                `,
       };
     }
@@ -67,13 +67,13 @@ function activateLasersBel() {
   } else {
     function createSix() {
       return {
-        __html: `  <div id='textMainGo' onClick={activateLasers}  class="selecting-lang"> <img  class="lang-flag" src=${image}/></div>`,
+        __html: `  <div id='textMainGo' ${selectingLunguage}> <img  ${lunguageFlag} src=${image}/></div>`,
       };
     }
 
     function createFive() {
       return {
-        __html: `  <div id='textMainGoTwo'  onClick={activateLasersBel} class="selecting-lang"> <img  class="lang-flag" src=${imageBel}/></div>`,
+        __html: `  <div id='textMainGoTwo' ${selectingLunguage}> <img  ${lunguageFlag} src=${imageBel}/></div>`,
       };
     }
 
@@ -95,16 +95,16 @@ export const Language = () => {
     <>
       <div className="belPosition">
         <div className="switch-lang">
-          <div id="textMainGo" onClick={activateLasers} className="selecting-lang">
-            <img className="lang-flag" src={image} />
+          <div id="textMainGo" onClick={activateLasers} className="selecting-Lunguage">
+            <img className="Lunguage-flag" src={image} />
           </div>
-          <div className="lang-dropdown">
+          <div className="Lunguage-dropdown">
             <div
               id="textMainGoTwo"
               onClick={activateLasersBel}
-              className="selecting-lang"
+              className="selecting-Lunguage"
             >
-              <img className="lang-flag" src={imageBel} />
+              <img className="Lunguage-flag" src={imageBel} />
             </div>
           </div>
         </div>

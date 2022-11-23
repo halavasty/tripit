@@ -20,13 +20,13 @@ export const Nicklogo = () => {
           <div id="textMainGo">
             <img src={image} />
           </div>
-          <div  className="lang-dropdown">
+          <div  className="Nicklogo-dropdown">
             <div
             >
                   <p className='textNick' onClick={loginactiv}>Login </p>
             </div>
           </div>
-          <div className="lang-dropdown">
+          <div className="Nicklogo-dropdown">
             <div
             >
                   <p className='textNick' onClick={logOffactiv}>Login OFF</p>

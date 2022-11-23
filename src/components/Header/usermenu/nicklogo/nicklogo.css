@@ -65,3 +65,15 @@
     color: white;
     opacity: 0.5;
 }
+
+
+.switch-lang:hover .Nicklogo-dropdown {
+    display: block;
+  }
+
+  .Nicklogo-dropdown {
+    display: none;
+    border-radius: 5px;
+    margin-top: 2px;
+  }
+
