@@ -1,5 +1,5 @@
 import React from "react";
-import "./language.css";
+import "./Language.css";
 import image from "../../../../assets/svg/Flag_UK.svg";
 import imageBel from "../../../../assets/img/bel.jpg";
 import ReactDOM from "react-dom";
@@ -33,14 +33,14 @@ function activateLasersBel() {
   // alert("флаг 2");
 
   if (count === 1) {
-    let a = "onClick={activateLasersBel}";
-    let b = "onClick={activateLasers}";
+    let activateBel = "onClick={activateLasersBel}";
+    let activate = "onClick={activateLasers}";
 
     function createThree() {
       return {
         __html: `
        
-                <div id='textMainGo' ${a} class="selecting-lang"><img  class="lang-flag" src=${image}/>
+                <div id='textMainGo' ${activateBel} class="selecting-lang"><img  class="lang-flag" src=${image}/>
                     
                 `,
       };
@@ -49,7 +49,7 @@ function activateLasersBel() {
     function createTwo() {
       return {
         __html: `
-              <div id='textMainGo' ${b} class="selecting-lang"><img  class="lang-flag" src=${imageBel}/></div>
+              <div id='textMainGo' ${activate} class="selecting-lang"><img  class="lang-flag" src=${imageBel}/></div>
                `,
       };
     }
@@ -94,17 +94,17 @@ export const Language = () => {
   return (
     <>
       <div className="belPosition">
-        <div class="switch-lang">
-          <div id="textMainGo" onClick={activateLasers} class="selecting-lang">
-            <img class="lang-flag" src={image} />
+        <div className="switch-lang">
+          <div id="textMainGo" onClick={activateLasers} className="selecting-lang">
+            <img className="lang-flag" src={image} />
           </div>
-          <div class="lang-dropdown">
+          <div className="lang-dropdown">
             <div
               id="textMainGoTwo"
               onClick={activateLasersBel}
-              class="selecting-lang"
+              className="selecting-lang"
             >
-              <img class="lang-flag" src={imageBel} />
+              <img className="lang-flag" src={imageBel} />
             </div>
           </div>
         </div>

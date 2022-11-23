@@ -1,13 +1,39 @@
 import React  from 'react';
-import "./nicklogo.css";
+import "./Nicklogo.css";
 import image from "../../../../assets/svg/Nick.svg";
+
+
+function logOffactiv(){
+  alert("logOffactiv");
+}
+
+function loginactiv(){
+  alert("loginactiv");
+}
 
 export const Nicklogo = () => {
     return (
       <>
        <div className='nicklogoPosition'>
           <p className='nicklogoImgPosition'> Nick McMilan </p>
-           <img className="nicklogoImg" src={image} alt="some example image"></img>
+        <div className="switch-lang">
+          <div id="textMainGo">
+            <img src={image} />
+          </div>
+          <div  className="lang-dropdown">
+            <div
+            >
+                  <p className='textNick' onClick={loginactiv}>Login </p>
+            </div>
+          </div>
+          <div className="lang-dropdown">
+            <div
+            >
+                  <p className='textNick' onClick={logOffactiv}>Login OFF</p>
+        
+            </div>
+          </div>
+        </div>
         </div>
       </>
     );
