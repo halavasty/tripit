@@ -6,18 +6,24 @@ import ReactDOM from "react-dom";
 
 let selectingLunguage = "class='selecting-Lunguage'";
 let lunguageFlag = "class='Lunguage-flag'";
+let activateBel = "onClick={activateLasersBel}";
+let activate = "onClick={activateLasers}";
 
 function activateLasers() {
 
   function createMarkup() {
     return {
-      __html: `  <div id='textMainGo' ${selectingLunguage} <img  ${lunguageFlag} src=${image}/></div>`,
+      __html: `
+              <div id='textMainGo' ${activateBel} ${selectingLunguage}><img  ${lunguageFlag} src=${image}/></div>
+              `,
     };
   }
 
   function createFoor() {
     return {
-      __html: `  <div id='textMainGoTwo' ${selectingLunguage} <img  ${lunguageFlag} src=${imageBel}/></div>`,
+      __html: `
+            <div id='textMainGo' ${activate} ${selectingLunguage}><img  ${lunguageFlag} src=${imageBel}/></div>
+             `,
     };
   }
 
@@ -35,13 +41,12 @@ let count = 1;
 function activateLasersBel() {
 
   if (count === 1) {
-    let activateBel = "onClick={activateLasersBel}";
-    let activate = "onClick={activateLasers}";
+
 
     function createThree() {
       return {
         __html: `
-                <div id='textMainGo' ${activateBel} ${selectingLunguage}><img  ${lunguageFlag} src=${image}/>
+                <div id='textMainGo' ${activateBel} ${selectingLunguage}><img  ${lunguageFlag} src=${image}/></div>
                 `,
       };
     }

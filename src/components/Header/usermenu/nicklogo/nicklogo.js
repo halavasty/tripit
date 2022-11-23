@@ -3,19 +3,23 @@ import "./Nicklogo.css";
 import image from "../../../../assets/svg/Nick.svg";
 
 
+function logiNameActiv(){
+  alert("test");
+}
+
 function logOffactiv(){
-  alert("logOffactiv");
+  alert("test");
 }
 
 function loginactiv(){
-  alert("loginactiv");
+  alert("test");
 }
 
 export const Nicklogo = () => {
     return (
       <>
        <div className='nicklogoPosition'>
-          <p className='nicklogoImgPosition'> Nick McMilan </p>
+          <p onClick={logiNameActiv} className='nicklogoImgPosition'> Nick McMilan </p>
         <div className="switch-lang">
           <div id="textMainGo">
             <img src={image} />
