@@ -1,10 +1,11 @@
 import React  from 'react';
 import "./Nicklogo.css";
 import image from "../../../../assets/svg/Nick.svg";
+import useState  from 'react';
 
-
-function logiNameActiv(){
+function  logiNameActiv (){
   alert("test");
+ 
 }
 
 function logOffactiv(){
@@ -16,6 +17,7 @@ function loginactiv(){
 }
 
 export const Nicklogo = () => {
+
     return (
       <>
        <div className='nicklogoPosition'>
