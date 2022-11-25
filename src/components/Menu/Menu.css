@@ -1,8 +1,12 @@
-header, .button {
+header, .button, .LN {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+}
+
+.LN{
+  padding-top: 41px;
 }
 
 .Menu{
@@ -10,6 +14,7 @@ header, .button {
   padding-left: 1.25%;
   padding-top: 1.93%;
   padding-bottom: 1.93%;
+  height: 100%;
 }
 
 .menu{
@@ -20,11 +25,12 @@ header, .button {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+  height: 80%;
 }
 
 .button{
   width: 84%;
-  margin: 0px;
+  padding: 5% 0% 5% 0%;
 }
 
 .button:hover{
@@ -38,6 +44,16 @@ header, .button {
 
 .buttonText{
   margin: 0px;
-  width: 80%;
-  font-weight: 500;
+  width: 60%;
+  text-align: start;
+  padding-left: 10%;
+  font-family: 'Sora';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.Menu-List{
+  height: 100%;
 }

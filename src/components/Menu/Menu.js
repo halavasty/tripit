@@ -54,8 +54,14 @@ export const Menu = () => {
     <div className="Menu">
       <header>
 
-        <Logo />
-        <CompanyName />
+        <section className="LN">
+          <Logo />
+          <CompanyName />
+        </section>
+
+        {/* <Logo />
+        <CompanyName /> */}
+
         <NewTripButton onClick = {TripClick}>New Trip +</NewTripButton>
 
       </header>

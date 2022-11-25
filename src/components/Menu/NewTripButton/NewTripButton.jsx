@@ -1,4 +1,3 @@
-import { Children } from "react"
 import "./NewTripButton.css"
 
 export const NewTripButton = ({children, ...props}) => {
