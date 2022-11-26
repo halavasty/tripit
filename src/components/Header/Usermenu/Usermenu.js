@@ -11,6 +11,7 @@ export const Usermenu = () => {
         <Language/>
         <Bell counter={8} />
         <Nicklogo/>
+        1
       </div>
       </>
     );
