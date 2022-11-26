@@ -1,0 +1,17 @@
+.ballStatus{
+ width: 32px;
+}
+
+.ballPosition{
+padding: 10px 18px 0px 0px;
+}
+
+.Ball-Number{
+    position: absolute;
+    margin: 7px 214px 0px 0px;
+    color: red;
+    font-weight: 700;
+    -webkit-border-radius: 18px;
+    background-color: white;
+    width: 8px;
+}
