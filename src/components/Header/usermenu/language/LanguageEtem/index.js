@@ -6,7 +6,6 @@ export function LanguageEtem ({value}){
         <div>
             {value}
         </div>
-
     );
 
 }
