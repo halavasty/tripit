@@ -15,12 +15,14 @@ function result(){
 }
 
 export const Language = () => {
-
+ 
       const list = [flagOne];
-      return (
-        <div className="center">
-            <LanguageList list={list}/>
-        </div>
 
+      return (
+
+        <div className="center" key={list.id}>
+            <LanguageList list={list}  />
+        </div>
+  
   );
 };
