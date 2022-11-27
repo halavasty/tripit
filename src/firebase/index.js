@@ -51,3 +51,7 @@ export const login = async () => {
     alert(err.message);
   }
 };
+
+export const logout = () => {
+  auth.signOut();
+};

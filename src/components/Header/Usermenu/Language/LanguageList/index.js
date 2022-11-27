@@ -8,7 +8,6 @@ export function LanguageList ({list} ){
         
         list.map(lang => 
                 (
-                    
                     <div key={lang.name}  className="selecting-Lunguage"  onClick={LanguageEvent}>
                         <img  className={lang.class} src={lang.image} alt={lang.name}  />
                     </div>
