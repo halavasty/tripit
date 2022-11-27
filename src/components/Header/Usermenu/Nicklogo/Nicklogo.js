@@ -1,7 +1,10 @@
-import React  from 'react';
+import React, {useState}  from 'react';
+import { useAuthState } from "react-firebase-hooks/auth";
+
 import "./Nicklogo.css";
 import image from "../../../../assets/svg/Nick.svg";
-import useState  from 'react';
+import { auth, login } from "../../../../firebase";
+
 
 function  logiNameActiv (){
   alert("test");
@@ -18,6 +21,11 @@ function loginactiv(){
 
 export const Nicklogo = () => {
 
+    const [user, isLoginUser] = useAuthState(auth);
+
+  // const [user, isLoginUser] = useAuthState(auth);
+  // const [isLoading, setIsLoading] = useState(false);
+
     return (
       <>
        <div className='nicklogoPosition'>
@@ -25,11 +33,13 @@ export const Nicklogo = () => {
         <div className="switch-lang">
           <div id="textMainGo">
             <img src={image} />
+      
           </div>
           <div  className="Nicklogo-dropdown">
             <div
             >
-                  <p className='textNick' onClick={loginactiv}>Login </p>
+         
+                  <p className='textNick' onClick={login}>Login </p>
             </div>
           </div>
           <div className="Nicklogo-dropdown">
