@@ -1,0 +1,42 @@
+.bel{
+    width: 28px;
+    background-image: url();
+}
+
+.belPosition{
+    padding: 12px 22.89px 0px 0px;
+    width: 56.15px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.belPosition:hover{
+    opacity: 0.8;
+}
+
+.switch-lang {
+    cursor: pointer;
+    z-index: 50;
+    position: absolute;
+  }
+
+  .switch-lang:hover .Lunguage-dropdown {
+    display: block;
+  }
+ 
+  .Lunguage-flag{
+    width: 28px;
+  }
+
+  .Lunguage-dropdown {
+    display: none;
+    border-radius: 5px;
+    margin-top: 2px;
+  }
+
+  .selecting-Lunguage {
+    padding: 3px 5px 3px 5px;
+    cursor: pointer;
+  }
+
