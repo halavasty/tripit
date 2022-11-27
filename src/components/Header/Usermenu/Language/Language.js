@@ -2,6 +2,7 @@ import React from "react";
 import "./Language.css";
 import { LanguageList } from "./LanguageList";
 import { LanguageEvent } from "./LanguageList";
+import { LanguageListStart } from "./LanguageListStart";
 import image from "../../../../../src/assets/img/bel.jpg";
 import imageTwo from "../../../../../src/assets/svg/Flag_UK.svg";
 import imageThree from "../../../../../src/assets/img/Norve.jpg";
@@ -11,6 +12,10 @@ function mainLangugeEvent() {
 }
 
 export const Language = () => {
+
+      const listStart = [
+        {name: "en", image: imageTwo, class: "Lunguage-flag" },
+      ];
 
       const list = [
         {name: "by", image: image, class: "Lunguage-flag" },
@@ -22,7 +27,9 @@ export const Language = () => {
           <div  className="Position-Lungudge">
             <div className="PostList belPosition">
                 <div className="switch-lang">    
-                  <img className="Lunguage-flag" src={imageTwo} onClick={mainLangugeEvent} />
+                  {/* <img className="Lunguage-flag" src={imageTwo} onClick={mainLangugeEvent} /> */}
+                  <LanguageListStart listStart={listStart} />
+               
                     <div className="Lunguage-dropdown">
                        <LanguageList list={list}/>
                     </div>
