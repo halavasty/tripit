@@ -3,24 +3,35 @@ import "./Language.css";
 import { LanguageList } from "./LanguageList";
 import image from "../../../../../src/assets/img/bel.jpg";
 import imageTwo from "../../../../../src/assets/svg/Flag_UK.svg";
+import imageThree from "../../../../../src/assets/img/Norve.jpg";
 
-const flagOne = <img onClick={result} className="Post-position Lunguage-flag" src={image}/>;
-
-function result(){
+function mainLangugeEvent() {
   alert("test");
-  flagOne = "";
-  flagOne = <img onClick={result} className="Post-position Lunguage-flag" src={imageTwo}/>;
-  console.log(flagOne);
-  return flagOne;
+  
 }
+
 
 export const Language = () => {
 
-      const list = [flagOne];
+      const list = [
+        {name: "by", image: image, class: "Lunguage-flag" },
+        {name: "nr", image: imageThree, class: "Lunguage-flag" },
+      ];
+
       return (
         <div className="center">
-            <LanguageList list={list}/>
-        </div>
+          <div  className="Position-Lungudge">
+            <div className="PostList belPosition">
+                <div className="switch-lang">    
+                  <img className="Lunguage-flag" src={imageTwo} onClick={mainLangugeEvent} />
+                    <div className="Lunguage-dropdown">
+                       <LanguageList list={list}/>
+                    </div>
+               </div>
+           </div>
+         </div>
+      </div>
+    
 
   );
 };

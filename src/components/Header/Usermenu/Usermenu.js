@@ -9,7 +9,7 @@ export const Usermenu = () => {
       <>
       <div className='center userMain userMainPosition'>
         <Language/>
-        <Bell counter={8} />
+          <Bell counter={8} />
         <Nicklogo/>
       </div>
       </>
