@@ -1,6 +1,7 @@
 import React from "react";
 import "./Language.css";
 import { LanguageList } from "./LanguageList";
+import { LanguageEvent } from "./LanguageList";
 import image from "../../../../../src/assets/img/bel.jpg";
 import imageTwo from "../../../../../src/assets/svg/Flag_UK.svg";
 import imageThree from "../../../../../src/assets/img/Norve.jpg";
