@@ -11,9 +11,7 @@ function mainLangugeEvent() {
   
 }
 
-
 export const Language = () => {
-<<<<<<< HEAD
 
       const list = [
         {name: "by", image: image, class: "Lunguage-flag" },
@@ -33,17 +31,5 @@ export const Language = () => {
            </div>
          </div>
       </div>
-    
-=======
- 
-      const list = [flagOne];
->>>>>>> 648e4c9fdcc152b02a4d3e35bdff8cc86ffa8e0b
-
-      return (
-
-        <div className="center" key={list.id}>
-            <LanguageList list={list}  />
-        </div>
-  
   );
 };
