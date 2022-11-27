@@ -1,0 +1,18 @@
+.NewTripButton{
+  width: 84%;
+  height: 48px;
+  margin-top: 43px;
+  background-color: #346AFF;
+  border: #346AFF;
+  border-radius: 16px;
+  color: white;
+  font-family: 'Sora';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+  
+.NewTripButton:hover{
+  background-color: aqua;
+}

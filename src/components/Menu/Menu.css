@@ -1,5 +1,59 @@
-.Menu {
-  background-color: red;
+header, .button, .LN {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }
-.Menu-List {
+
+.LN{
+  padding-top: 41px;
+}
+
+.Menu{
+  width: 15%;
+  padding-left: 1.25%;
+  padding-top: 1.93%;
+  padding-bottom: 1.93%;
+  height: 100%;
+}
+
+.menu{
+  margin: 0px;
+  padding-left: 8%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  height: 80%;
+}
+
+.button{
+  width: 84%;
+  padding: 5% 0% 5% 0%;
+}
+
+.button:hover{
+  border: 1px solid black;
+}
+
+.image{
+  width: 18px;
+  height: 18px;
+}
+
+.buttonText{
+  margin: 0px;
+  width: 60%;
+  text-align: start;
+  padding-left: 10%;
+  font-family: 'Sora';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.Menu-List{
+  height: 100%;
 }
