@@ -39,8 +39,7 @@ export const Nicklogo = () => {
     <>
       <div className="nicklogoPosition">
         <p onClick={logiNameActiv} className="nicklogoImgPosition">
-          {" "}
-          {userName}{" "}
+          {userName}
         </p>
         <div className="switch-lang">
           <div id="textMainGo">
