@@ -48,7 +48,7 @@ export const login = async () => {
     }
   } catch (err) {
     console.error(err);
-    alert(err.message);
+   // alert(err.message);
   }
 };
 
