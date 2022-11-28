@@ -1,76 +1,54 @@
-import React, {useState}  from 'react';
+import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import "./Nicklogo.css";
-import image from "../../../../assets/svg/Nick.svg";
+import image from "../../../../assets/img/nologin.jpg";
 
 import { auth, login, logout, firestore } from "../../../../firebase";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import {
+  collection,
+  addDoc,
+  serverTimestamp,
+  getFirestore,
+} from "firebase/firestore";
+import { NicklogoLogin } from "./NicklogoLogin";
 
-function  logiNameActiv (){
+function logiNameActiv() {
   alert("test");
- 
 }
 
-console.log("user",auth);
-
-
-
 export const Nicklogo = () => {
-    //  let displayName = { displayName};
-    // const [user, isLoginUser] = useAuthState(auth);
-    const postCollection = collection(firestore, "post");
-    const [user] = useAuthState(auth);
-    const [post, setPost] = useState({ title: "", text: "" });
+  const db = getFirestore();
+  const colRef = collection(db, "collection_name");
+  const postCollection = collection(firestore, "post");
+  const [user, isLoginUser] = useAuthState(auth);
 
+  // const elements = [user] !== undefined  ? Object.keys([user]).reduce((a,c) => a.concat(...Object.values([user][c])),[]) : "пусто";
+  // console.log("elements", elements);
 
-let result = "Авторізація";
-    let userName =  user.displayName !== 10 ? user.displayName : "авоторізація";
-    let value = [user];
-    console.log("value.displayName", value.displayName);
-    console.log("value", value);
- 
+  let userName = !!user && !!user.displayName ? user.displayName : "Не авторизован";
+  let userImage = !!user && !!user.photoURL ? user.photoURL : image;
 
-    // let listPost =  [user] ?  [user].map((item => { user = item.user.displayName })) : null;
-    // console.log("listPost",listPost);
+  // if(!isLoginUser){
+  //   alert("Авторизован");
+  // }else{
+  //   alert("Не авторизован");
+  // }
 
-    if([user].displayName !== null){
-      console.log("Получілось");
-    }
-    
-   console.log("postCollection",auth);
-
-
-// console.log("user.displayName", user.displayName);
-  // const [user, isLoginUser] = useAuthState(auth);
-  // const [isLoading, setIsLoading] = useState(false);
-
-    return (
-      <>
-       <div className='nicklogoPosition'>
-          <p onClick={logiNameActiv} className='nicklogoImgPosition'> {userName} </p>
+  return (
+    <>
+      <div className="nicklogoPosition">
+        <p onClick={logiNameActiv} className="nicklogoImgPosition">
+          {" "}
+          {userName}{" "}
+        </p>
         <div className="switch-lang">
           <div id="textMainGo">
-            <img src={image} />
-      
+            <img className="userImage-Nicklogo" src={userImage} />
           </div>
-          <div  className="Nicklogo-dropdown">
-            <div
-            >
-                  <p className='textNick' onClick={login}>Login </p>
-            </div>
-          </div>
-          <div className="Nicklogo-dropdown">
-            <div
-            >
-                  <p className='textNick' onClick={logout}>Login OFF</p>
-        
-            </div>
-          </div>
+          <NicklogoLogin user={user} />
         </div>
-        </div>
-
-        
-      </>
-    );
-  };
+      </div>
+    </>
+  );
+};
